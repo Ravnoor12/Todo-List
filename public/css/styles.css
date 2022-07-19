@@ -1,0 +1,179 @@
+html {
+  background-color: #E4E9FD;
+  background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%);
+  min-height: 1000px;
+  font-family: 'helvetica neue';
+}
+
+h1 {
+  color: #fff;
+  padding: 10px;
+  /* display: inline-block; */
+}
+
+#btn{
+  padding: 40px 10px;
+}
+
+.box {
+  max-width: 400px;
+  margin: 50px auto;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+#heading {
+  background-color: #A683E3;
+  text-align: center;
+}
+
+#heading1 {
+  background-color: #A683E3;
+  text-align: center;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.bottom{
+  align-items: center;
+  margin: 1% 48%;
+}
+#bottom_btn{
+  text-align: center;
+  width: max-content;
+  font-size: large;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
+}
+
+#bottom_btn:hover{
+  cursor: pointer;
+  background-color: #dae8fa;
+}
+
+.item {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #F1F1F1;
+}
+
+.item:last-child {
+  border-bottom: 0;
+}
+
+input:checked+p {
+  text-decoration: line-through;
+  text-decoration-color: #A683E3;
+}
+
+input[type="checkbox"] {
+  margin: 20px;
+}
+
+p {
+  margin: 0;
+  padding: 20px;
+  font-size: 20px;
+  font-weight: 200;
+  color: #00204a;
+}
+
+form.item {
+  text-align: center;
+  margin-left: 20px;
+}
+
+#button {
+  min-height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border-color: transparent;
+  background-color: #A683E3;
+  color: #fff;
+  font-size: 30px;
+  padding-bottom: 6px;
+  border-width: 0;
+}
+
+input[type="text"] {
+  text-align: center;
+  height: 60px;
+  top: 10px;
+  border: none;
+  background: transparent;
+  font-size: 20px;
+  font-weight: 200;
+  width: 313px;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  box-shadow: inset 0 -3px 0 0 #A683E3;
+}
+
+::placeholder {
+  color: grey;
+  opacity: 1;
+}
+
+footer {
+  color: white;
+  color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+/* below is the code of popup  */
+
+/* .wrapper{
+  background: linear-gradient(90deg,#7f00ff,#e100ff);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+} */
+
+.modal{
+  position: absolute;
+  top: 30%;
+  bottom: 40%;
+  right: 30%;
+  left: 30%;
+  display: flex;
+  align-items: center;
+  background-color: rgba(172, 172, 172, 0.7);
+  transition: all 0.4s; 
+  visibility: hidden;
+  opacity: 0;
+}
+
+.modal:target{
+  visibility: visible;
+  opacity: 1;
+}
+
+.modalcontent{
+  align-items: center;
+  background: #f8f9ff;
+  width: 500px;
+  max-width: 90%;
+  padding: 1em 2em;
+  border-radius: 4px;
+}
+
+.modalcontent a{
+  font-size: 21px;
+  font-weight: 600px;
+}
+
+.modalclose{
+  position: absolute;
+  top: 0;
+  right: 15px;
+  color: #585858;
+  text-decoration: none;
+  font-size: 36px;
+}

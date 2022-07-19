@@ -1,0 +1,46 @@
+<%- include("header") -%>
+
+  <div class="box" id="heading1">
+    <h1> <%= listTitle %> </h1>
+    <div class="wrapper">
+    <form id="btn">
+     <a href="#modalbox" style="text-decoration: none; color: white; background-color: #A683E3;border-radius: 5px;"><i class="fa-solid fa-pen-to-square"></i></a>
+    </form>
+  </div>
+  </div>
+
+  <div class="box">
+    <% newListItems.forEach(function(item){ %>
+      <form action="/delete" method="post">
+        <div class="item">
+          <input type="checkbox" name="checkBox" value="<%=item._id %>" onchange="this.form.submit()">
+          <p><%=  item.name  %></p>
+        </div>
+        <input type="hidden" name="listName" value="<%=listTitle%>">
+      </form>
+      <% }) %>
+
+      <form class="item" action="/" method="post">
+        <input type="text" name="newItem" placeholder="New Item" autocomplete="off">
+        <button type="submit" value="<%=listTitle%>" name="list" id="button">+</button>
+      </form>
+  </div>
+  <form action="/listnames" class="bottom" method="get">
+    <button type="submit" id="bottom_btn">All lists</button>
+  </form>
+
+<!-- below is the code of popup -->
+
+<div id="modalbox" class="modal">
+  <div class="modalcontent">
+    <p>New Title</p>
+    <form action="/newTitle" method="post">
+      <input type="text" name="newTitle"  placeholder="New Title" autocomplete="off">
+      <input type="hidden" name="listName" value="<%=listTitle%>">
+      <button type="submit">Confirm</button> 
+    </form>
+    <a href="#" class="modalclose">&times;</a> 
+  </div>
+</div>
+
+<%- include("footer") -%>
