@@ -6,7 +6,7 @@ const mongoose = require("mongoose");
 const _ = require("lodash");
 const srvr = process.env.N1_KEY; 
 const srvrCred = process.env.N1_SECRET; 
-const date = require(__dirname + "/date.js");
+//const date = require(__dirname + "/date.js");
 
 const app = express();
 
@@ -37,7 +37,7 @@ const listSchema = {
 const List = mongoose.model("List",listSchema);
 
 app.get("/", function(req, res) {  
-//const day = date.getDate();
+
   Item.find({},function(err,foundItem){
      //console.log(foundItem);
      if(foundItem.length===0){
@@ -184,10 +184,15 @@ app.get("/:param", function(req,res){
 
 
 
-app.get("/about", function(req, res){
-  res.render("about");
-});
+// app.get("/about", function(req, res){
+//   res.render("about");
+// });
 
-app.listen(process.env.PORT || 3000, function () { 
-  console.log("Server started.");
-   }); 
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 3000;
+}
+ 
+app.listen(port, function() {
+  console.log("Server started succesfully");
+});
