@@ -6,13 +6,13 @@
           
                 <!-- <button type="submit" value="<%=  item.name  %>" style="width: 100%; background-color: #9e50e6; border: none; border-radius: 5px; color: aliceblue; font-size: larger;cursor: pointer; "><p><%=  item.name  %></p>
                 </button> -->
-              <div class="item" id="heading">
+              <div class="item" id="heading" style="background-color: #fae6e7;">
                   <form action="/deleteHeading" method="post">
-                  <button type="submit" name="checkBox" value="<%=item._id %>" onchange="this.form.submit()" style="background-color: #A683E3; border: none; cursor: pointer;" ><i class="fa-solid fa-circle-minus"></i></button>
+                  <button type="submit" name="checkBox" value="<%=item._id %>" onchange="this.form.submit()" style="background-color: #fae6e7; border: none; cursor: pointer;" ><i class="fa-solid fa-circle-minus"></i></button>
                   <input type="hidden" name="listName" value="<%=item.name%>">
                 </form>
                 <form action="/<%=  item.name  %>" >
-                  <button type="submit" value="<%=  item.name  %>" style="width: 100%; background-color: #A683E3; border: none; border-radius: 5px; color: aliceblue; font-size: larger;cursor: pointer; "><p><%=  item.name  %></p>
+                  <button type="submit" value="<%=  item.name  %>" style="width: 100%; background-color: #fae6e7; border: none; border-radius: 5px; color: aliceblue; font-size: larger;cursor: pointer; "><p><%=  item.name  %></p>
                   </button>
                 </form>
               </div>
