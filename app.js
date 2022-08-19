@@ -161,6 +161,9 @@ app.get("/:param", function(req,res){
       res.render("listsname",{listName:foundItem});
     })
   }
+  else if(custonListName==="Today"){
+    res.redirect("/");
+  }
   else{
     List.findOne({name:custonListName},function(err,foundItem){
         if(!err){
